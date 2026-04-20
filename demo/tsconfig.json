@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "paths": {
+      "@efficimo/dock": ["../src/index.ts"],
+      "@efficimo/dock/react": ["../src/react.ts"]
+    }
+  },
+  "include": ["src"]
+}
