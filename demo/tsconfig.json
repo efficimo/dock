@@ -10,7 +10,8 @@
     "paths": {
       "@efficimo/dock": ["../src/index.ts"],
       "@efficimo/dock/react": ["../src/react.ts"]
-    }
+    },
+    "types": ["vite/client"]
   },
   "include": ["src"]
 }

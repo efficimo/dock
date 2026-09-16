@@ -7,8 +7,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@efficimo/dock/react": path.resolve(__dirname, "../src/react.ts"),
-      "@efficimo/dock": path.resolve(__dirname, "../src/index.ts"),
+      "@efficimo/dock/react": path.resolve(import.meta.dirname, "../src/react.ts"),
+      "@efficimo/dock": path.resolve(import.meta.dirname, "../src/index.ts"),
     },
+    // The lib is read straight from ../src, so its imports resolve against the root
+    // node_modules — without this the demo would load a second copy of React.
+    dedupe: ["react", "react-dom", "@efficimo/observable", "@efficimo/observable-react"],
   },
 });
